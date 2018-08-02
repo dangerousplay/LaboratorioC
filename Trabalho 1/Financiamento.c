@@ -15,6 +15,23 @@
 
 
 int main() {
+    float salario;
+    float financiamento;
+
     printf("Olá, digite o seu salário: ");
-    
+
+    scanf("%f", &salario);
+
+    printf("Digite o valor do financiamento: ");
+
+    scanf("%f", & financiamento);
+
+
+    if(financiamento <= (salario*5)){
+        printf("Financiamento Concedido. \n");
+    } else {
+        printf("Financiamento Negado. \n");
+    }
+
+    printf("Obrigado por nos consultar. \n");
 }
