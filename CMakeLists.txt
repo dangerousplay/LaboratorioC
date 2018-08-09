@@ -3,4 +3,4 @@ project(Laboratorio C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Laboratorio "Trabalho 2/AREA.c")
+add_executable(Laboratorio "Trabalho 2/MAX.c")
