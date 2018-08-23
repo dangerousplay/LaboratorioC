@@ -2,13 +2,14 @@
 // Created by aluno on 22/08/18.
 //
 
+#include <stdlib.h>
 #include "math.h"
 
 
-int* absolute(double[] notas) {
-    int notasTen[11];
+int* absolute(const double* notas, unsigned int size) {
+    int* notasTen = calloc(sizeof(int), 11);
 
-    for (int i = 0; i < notas / sizeof(double); i++) {
+    for (int i = 0; i < size; i++) {
         double nota = notas[i];
 
         if (nota >= 0 && nota < 1) {
@@ -37,5 +38,13 @@ int* absolute(double[] notas) {
     }
 
 
+    return notasTen;
+}
+
+double* relative(const int* absolute, unsigned int size) {
+    double* notasTen = calloc(sizeof(double), 11);
+    for(int i = 0; i < 11; i++){
+        notasTen[i] = ((double)absolute[i]/size);
+    }
     return notasTen;
 }

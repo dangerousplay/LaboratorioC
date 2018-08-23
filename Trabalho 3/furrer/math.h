@@ -5,6 +5,8 @@
 #ifndef LABORATORIO_MATH_H
 #define LABORATORIO_MATH_H
 
-int absolute(double[] notas);
+int* absolute(const double* notas, unsigned int size);
+
+double* relative(const int* absolute, unsigned int size);
 
 #endif //LABORATORIO_MATH_H
