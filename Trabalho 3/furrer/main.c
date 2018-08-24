@@ -9,9 +9,9 @@ int main(){
     double* notas = calloc(sizeof(double),80);
 
     printf("Vamos calcular dados sobre notas de 80 alunos.\n");
-    printf("Digite 80 notas:\n ");
+    printf("Digite 80 notas: \n");
 
-    for(int i = 0; i < 5; i++) {
+    for(int i = 0; i < 10; i++) {
         double nota = 0;
 
         scanf("%lf",&nota);
