@@ -15,10 +15,13 @@ typedef struct Filter {
     int (*predicate)(long codigo, double price);
 } Filter;
 
+typedef struct Comparator {
+    int (*compare)(Article a, Article b);
+} Comparator;
+
 typedef struct List {
     unsigned int size;
     Article* artigo;
-
 } List;
 
 #ifndef LABORATORIO_MATH_H
@@ -28,7 +31,9 @@ long double averageOfPrices(List artigos);
 
 List findByPriceMoreThanAverage(List articles);
 
-List findAndOrderByPrice(List articles);
+List orderByPriceAsc(List articles);
+
+List orderByPriceDesc(List articles);
 
 List filterBy(List list, Filter filter);
 
