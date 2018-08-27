@@ -39,6 +39,10 @@ long double totalPedidos(Pedido* pedidos, unsigned int size);
 
 Comissoes totalComissao(Pedido* pedidos, unsigned int size);
 
+long totalProcessado(Pedido* pedidos, unsigned int size);
+
+long double totalArrecadado(Pedido* pedidos, unsigned int size);
+
 long double comissaoPaga(Comissoes comissoes);
 
 Vendedores sumDuplicates(Comissoes comissoes);

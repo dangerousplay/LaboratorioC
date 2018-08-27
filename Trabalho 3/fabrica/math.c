@@ -20,7 +20,7 @@ float comissaoPorcentagem(unsigned int quantidade){
         return 0.1;
     } else if(quantidade >= 20 && quantidade < 50){
         return 0.15;
-    } else if(quantidade >= 50 && quantidade < 74){
+    } else if(quantidade >= 50 && quantidade < 75){
         return 0.2;
     } else if(quantidade >= 75){
         return 0.25;
@@ -54,6 +54,7 @@ Comissoes totalComissao(Pedido* pedidos, unsigned int size){
 
 Vendedores sumDuplicates(Comissoes comissoes){
     Vendedor* vendedores = calloc(sizeof(Vendedor), 10);
+    int codigos[10];
 
     for(int i = 0; i < comissoes.size; i++){
         Comissao c = comissoes.comissao[i];
@@ -78,4 +79,20 @@ long double comissaoPaga(Comissoes comissoes){
     }
 
     return total;
+}
+
+long totalProcessado(Pedido* pedidos, unsigned int size){
+    long sum = 0;
+    for(int i = 0; i < size; i++){
+        sum += pedidos[i].quantidade;
+    }
+    return sum;
+}
+
+long double totalArrecadado(Pedido* pedidos, unsigned int size){
+    long double sum = 0;
+    for(int i = 0; i < size; i++){
+        sum += pedidos[i].valor;
+    }
+    return sum;
 }
