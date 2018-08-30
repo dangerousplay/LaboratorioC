@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 #define MAX(a,b) a>b ? a:b
+
 #define MIN(a,b) a<b ? a:b
 
 int main()
@@ -11,42 +12,42 @@ int main()
     int a, b;
     scanf("%d\n%d", &a, &b);
 
-    for(int i = MIN(a,b); i < MAX(a,b); i++) {
+    for(int i = MIN(a,b); i <= (a>b ? a : b); i++) {
         if(i <= 9 && i >= 1){
             switch (i){
                 case 1:
-                    printf("one");
+                    printf("one\n");
                     break;
                 case 2:
-                    printf("two");
+                    printf("two\n");
                     break;
                 case 3:
-                    printf("three");
+                    printf("three\n");
                     break;
                 case 4:
-                    printf("four");
+                    printf("four\n");
                     break;
                 case 5:
-                    printf("five");
+                    printf("five\n");
                     break;
                 case 6:
-                    printf("six");
+                    printf("six\n");
                     break;
                 case 7:
-                    printf("seven");
+                    printf("seven\n");
                     break;
                 case 8:
-                    printf("eight");
+                    printf("eight\n");
                     break;
                 case 9:
-                    printf("nine");
+                    printf("nine\n");
                     break;
             }
         } else if (i > 9){
             if((i & 1) == 0)
-                printf("eden");
+                printf("even\n");
             else
-                printf("odd");
+                printf("odd\n");
         }
 
     }
